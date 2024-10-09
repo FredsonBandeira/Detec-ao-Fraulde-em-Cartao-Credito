@@ -11,8 +11,8 @@ print(df.columns)
 # Exiba as primeiras linhas do DataFrame para entender sua estrutura
 print(df.head())
 
-# Escolher a coluna para análise (exemplo: 'Amount')
-coluna = 'Amount'  # Pode ajustar para outra coluna relevante do dataset
+
+coluna = 'Amount'  
 
 # Cálculo das estatísticas
 media = df[coluna].mean()
