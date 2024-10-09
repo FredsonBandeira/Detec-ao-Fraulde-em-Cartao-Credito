@@ -11,10 +11,10 @@ import shap
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Carregar dataset
+
 data = pd.read_csv("creditcard/creditcard_2023.csv")
 
-# Separar recursos e rótulo
+
 X = data.drop("Class", axis=1)  # 'Class' é a variável alvo (0: legítimo, 1: fraudulento)
 y = data["Class"]
 
@@ -29,11 +29,11 @@ X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, 
 smote = SMOTE(random_state=42)
 X_resampled, y_resampled = smote.fit_resample(X_train, y_train)
 
-# Treinar o modelo de Random Forest
+
 model = RandomForestClassifier(n_estimators=100, random_state=42)
 model.fit(X_resampled, y_resampled)
 
-# Fazer previsões no conjunto de teste
+
 y_pred = model.predict(X_test)
 
 # Avaliar o modelo
@@ -98,15 +98,15 @@ y_pred_best = best_model.predict(X_test)
 print(confusion_matrix(y_test, y_pred_best))
 print(classification_report(y_test, y_pred_best))
 
-# Explicação do modelo com SHAP
+
 explainer = shap.TreeExplainer(best_model)
 shap_values = explainer.shap_values(X_test)
 
-# Plotar o gráfico SHAP
+
 shap.summary_plot(shap_values[1], X_test, plot_type="bar")
 
-# Salvar o modelo treinado
+
 joblib.dump(best_model, 'random_forest_model.pkl')
 
-# Carregar o modelo salvo
+
 loaded_model = joblib.load('random_forest_model.pkl')
