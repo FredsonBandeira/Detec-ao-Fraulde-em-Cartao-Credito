@@ -8,7 +8,7 @@ df = pd.read_csv('creditcard/creditcard_2023.csv')
 # Exibir os nomes das colunas
 print("Colunas do dataset:")
 print(df.columns)
-# Exiba as primeiras linhas do DataFrame para entender sua estrutura
+
 print(df.head())
 
 
@@ -38,7 +38,6 @@ plt.legend()
 plt.grid(True)
 plt.show()
 
-# Gráfico de frequência (quantidade de ocorrências de cada valor)
 plt.figure(figsize=(10, 6))
 sns.histplot(df[coluna].value_counts(), bins=30, kde=True)
 plt.title(f'Gráfico de Frequência - {coluna}')
@@ -47,6 +46,5 @@ plt.ylabel('Ocorrências')
 plt.grid(True)
 plt.show()
 
-# Cálculo e exibição da frequência média (quantidade média de vezes que cada valor aparece)
 frequencia_media = df[coluna].value_counts().mean()
 print(f'Frequência média: {frequencia_media}')
