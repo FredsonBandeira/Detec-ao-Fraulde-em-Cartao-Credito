@@ -70,14 +70,13 @@ Aqui estão os passos para rodar o projeto, caso queira testar:
 
 1. **Pré-requisitos:** Certifique-se de que tem o Python instalado no seu computador.
 
-2. **Instalar Dependências:** Você pode usar o seguinte comando para instalar as bibliotecas necessárias:
-
-   ```bash
-   pip install -r requirements.txt 
 
 
-**Resultados**
+
+## Resultados
+
  Ao final, o sistema mostrará se as transações são legítimas ou suspeitas, e você verá algumas estatísticas sobre o desempenho do modelo.
 
-**Conclusão**
+## Conclusão
+
  Com este projeto, mostrei que é possível usar a tecnologia para detectar fraudes em tempo real, ajudando a prevenir perdas financeiras e aumentando a segurança das transações. O sistema pode ser ajustado para atender às necessidades específicas de diferentes empresas e pode ser expandido para analisar outras áreas além de cartões de crédito.
