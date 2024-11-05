@@ -6,6 +6,8 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.preprocessing import StandardScaler
 
+
+
 # Carregar dataset
 data = pd.read_csv("creditcard/creditcard_2023.csv")
 
